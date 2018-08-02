@@ -3,7 +3,7 @@ document.getElementById('sign-out').addEventListener('click', event => {
   socialNetwork.signOut();
 });
 
-const setUserProfile = () => {
+const setUserProfile = () => { // es la que pone la caja de donde esta el perfil 
   firebase.auth().onAuthStateChanged(user => {
     if (user) {
       let currentDogName = '';
@@ -33,4 +33,3 @@ const setUserProfile = () => {
     }
   });
 };
-
